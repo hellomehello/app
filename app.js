@@ -53,8 +53,8 @@ app.post('/send',function(req,res){
   	var errors = req.validationErrors();
 
   	if (errors) {
-	    res.send(errors);
-    	return;
+	    res.send(errors, 400);
+	    return;
   	}
 
 	var mailOptions = {
